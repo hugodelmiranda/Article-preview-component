@@ -1,0 +1,214 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  place-content: center;
+  line-height: 1.5;
+  letter-spacing: 0.12px;
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+  margin: 4.625rem 1.5rem;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.postBg img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  padding: 0 2rem 1.25rem 2rem;
+}
+
+.postTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+  line-height: 1.2;
+  color: hsl(217, 19%, 35%);
+}
+
+.postText {
+  margin-top: 20px;
+  line-height: 1.8;
+  font-size: 15px;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+
+.author {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postInfo {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.avatar {
+  grid-area: a;
+  text-align: center;
+  margin-right: 10px;
+}
+.avatar img {
+  height: 50px;
+  border-radius: 100%;
+}
+
+.authorName {
+  grid-area: b;
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+.postDate {
+  grid-area: d;
+  font-size: 15px;
+  color: hsl(214, 17%, 51%);
+}
+
+.shared {
+  justify-self: end;
+  grid-area: c;
+  min-width: 50px !important;
+  height: 50px;
+  border-radius: 100%;
+  background-color: hsl(210, 46%, 95%);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+.shared:hover {
+  background-color: hsl(214, 17%, 51%);
+}
+.shared:hover .sharedIcon path {
+  fill: white;
+}
+
+.sharedVisible {
+  display: none !important;
+}
+
+.sharedMenu {
+  background-color: hsl(217, 19%, 35%);
+  gap: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 2.5rem 0;
+  border-radius: 0 0 10px 10px;
+}
+.sharedMenu .sharedMenuTitle {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 15px;
+  padding-left: 20px;
+}
+.sharedMenu .socialIcon img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.arrow {
+  display: none;
+}
+
+@media only screen and (min-width: 730px) {
+  body {
+    display: grid;
+    place-content: center;
+    line-height: 1.5;
+    letter-spacing: 0.12px;
+    min-height: 100vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 285px 1fr;
+    grid-template-areas: "a b" "a c";
+    max-width: 730px;
+    margin: 0 1rem;
+  }
+  header {
+    grid-area: a;
+    max-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    overflow: hidden;
+  }
+  header img {
+    width: auto !important;
+  }
+  main {
+    grid-area: b;
+  }
+  footer,
+  .attribution {
+    grid-area: c;
+  }
+  main,
+  footer {
+    padding: 0px 50px;
+  }
+  .sharedMenu {
+    width: -moz-max-content;
+    width: max-content;
+    padding: 1.125rem 2.5rem;
+    left: 68%;
+    bottom: 30%;
+    border-radius: 10px;
+  }
+  .arrow {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 45%;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid hsl(217, 19%, 35%);
+  }
+}/*# sourceMappingURL=style.css.map */
